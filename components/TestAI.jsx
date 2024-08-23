@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { getQuestionsBasedOnNotes } from "../utils/chat";
 import "../utils/chat";
 import ThemeSwitcher from "./ThemeSwitcher";
-import '../app/globals.css'
+import "../app/globals.css";
 
 const TestAI = () => {
   const [inputText, setInputText] = useState("");
@@ -15,7 +15,7 @@ const TestAI = () => {
   const [isComplete, setIsComplete] = useState(false); // Track if all questions have been answered
   const [score, setScore] = useState(null); // tracks the user's score
   const [mistakes, setMistakes] = useState([]); // track where the user messed up
-  const [notes, setNotes] = useState('')
+  const [notes, setNotes] = useState("");
 
   const handleInputChange = (event) => {
     setInputText(event.target.value);
@@ -106,10 +106,12 @@ const TestAI = () => {
   };
 
   return (
-    <div className="h-screen container p-10 flex items-center flex-col ">
-      
+    <div className="h-screen container p-10 flex items-center flex-col justify-center ">
       <h2 className="text-3xl font-bold">TestAI</h2>
-      <p className="text-2xl text-center">a simple AI enabled test-taking-app which uses AI to generate questions based on notes <br /> provided by the user</p>
+      <p className="text-2xl text-center">
+        a simple AI enabled test-taking-app which uses AI to generate questions
+        based on notes <br /> provided by the user
+      </p>
       <input
         type="text"
         className="border rounded-lg bg-gray-200 outline-none  text-black px-4 py-2 w-5/6 shadow-md border-gray-200"
